@@ -1,34 +1,20 @@
 ---
+import Badge from '@/components/Badge.astro';
+import '../styles/global.css';
 import Layout from '@/layouts/Layout.astro';
-
-import KeyboardManager from '@/components/KeyboardManager.astro';
-import Hero from '@/components/sections/Hero.astro';
-import About from '@/components/sections/About.astro';
-import Experience from '@/components/sections/Experience.astro';
-import Education from '@/components/sections/Education.astro';
-import Projects from '@/components/sections/Projects.astro';
-import Skills from '@/components/sections/Skills.astro';
-
-import { basics } from '@cv';
-const { name, label } = basics;
 ---
 
-<Layout title={`Portafolio de ${name} - ${label}`}>
+<Layout title="Max Manuel">
   <main>
-    <Hero />
-    <About />
-    <Experience />
-    <Education />
-    <Projects />
-    <Skills />
+    <section class="w-full lg:w-[740px] mx-auto py-44">
+      <h1 class="text-5xl font-bold flex flex-row gap-x-4 mb-2">
+        Hey, soy Max Manuel <div class="flex justify-center items-center"><Badge>Disponible para trabajar</Badge></div>
+      </h1>
+      <h2 class="text-xl">
+        +5 años de experiencia. Desarrollador Web y Administrador de empresas. De Lima, Perú. Especializado en crear
+        aplicaciones web robustas y escalables.
+      </h2>
+    </section>
   </main>
-  <KeyboardManager />
 </Layout>
-
-<style>
-  main {
-    padding: 4rem;
-    margin: auto;
-    width: 100%;
-  }
-</style>
+<style></style>

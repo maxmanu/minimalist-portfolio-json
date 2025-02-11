@@ -1,0 +1,34 @@
+---
+import Layout from '@/layouts/Layout-curriculo.astro';
+
+import KeyboardManager from '@/components/curriculo/KeyboardManager.astro';
+import Hero from '@/components/curriculo/sections/Hero.astro';
+import About from '@/components/curriculo/sections/About.astro';
+import Experience from '@/components/curriculo/sections/Experience.astro';
+import Education from '@/components/curriculo/sections/Education.astro';
+import Projects from '@/components/curriculo/sections/Projects.astro';
+import Skills from '@/components/curriculo/sections/Skills.astro';
+
+import { basics } from '@cv';
+const { name, label } = basics;
+---
+
+<Layout title={`Portafolio de ${name} - ${label}`}>
+  <main>
+    <Hero />
+    <About />
+    <Experience />
+    <Education />
+    <Projects />
+    <Skills />
+  </main>
+  <KeyboardManager />
+</Layout>
+
+<style>
+  main {
+    padding: 4rem;
+    margin: auto;
+    width: 100%;
+  }
+</style>
